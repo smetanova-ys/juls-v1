@@ -5,6 +5,7 @@ body {
 }
 
 a {
+    display: block;
     text-decoration: none;
 }
 
@@ -71,14 +72,13 @@ a {
 .menu__links {
     display: flex;
     flex-wrap: wrap;
-    width: 700px;
+    width: 760px;
     list-style: none;
-    justify-content: flex-end;
+    justify-content:space-between;
     padding-left: 0;
 }
 
 .menu__link {
-    list-style: none;
     color: #000000;
     font-weight: 700;
 }
@@ -87,8 +87,32 @@ a {
     color: #424242;
 }
 
-.menu__item:nth-child(n+2) {
-    margin-left: 35px;
+.menu__item {
+    text-align: end;
+    position: relative;
+}
+
+.menu__sub {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 40px;
+    padding-left: 5px;
+    padding-bottom: 20px;
+    background-color: #F57F17;
+    width: 320px;
+    text-align: start;
+    list-style: none;
+    color: #000000;
+    font-weight: 700;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.sub-item:nth-child(n+2) {
+    margin-top: 15px;
 }
 
 .wrapper {
